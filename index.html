@@ -3,187 +3,193 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Centro de Aprendizaje - Partners PedidosYa</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <title>Mejora Continua - Partners PedidosYa</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+
   <style>
     :root {
       --rosa: #FA0050;
-      --celeste: #61C8FA;
-      --blanco: #FFFFFF;
-      --oscuro: #100423;
-    }
-
-    * {
-      box-sizing: border-box;
+      --blanco: #ffffff;
+      --gris-texto: #444;
     }
 
     body {
       margin: 0;
       font-family: "Poppins", sans-serif;
-      background-color: var(--blanco);
-      overflow-x: hidden;
-    }
-
-    /* ---------------- HERO ---------------- */
-    .hero {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      min-height: 100vh;
-      background: linear-gradient(125deg, var(--rosa) 50%, var(--celeste) 50%);
-      padding: 0 8%;
-      color: var(--blanco);
-      position: relative;
+      background: var(--rosa);
+      height: 100vh;
       overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-    /* Logo centrado */
-    .logo {
-      position: absolute;
-      top: 30px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 170px;
-      z-index: 3;
+    .page {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 28px;
+      width: 100%;
+      max-width: 1200px;
+      padding: 0 20px;
     }
 
-    /* Texto principal */
-    .hero-content {
-      flex: 1;
-      z-index: 2;
-      animation: fadeInLeft 1s ease;
-    }
-
-    .hero-content h1 {
-      font-size: 2.8rem;
-      line-height: 1.2;
-      font-weight: 800;
-      margin-bottom: 20px;
-      text-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-    }
-
-    .hero-content p {
-      font-size: 1.15rem;
-      max-width: 540px;
-      margin-bottom: 35px;
-      color: var(--blanco);
-      text-align: justify;
-    }
-
-    /* BOTÓN PRINCIPAL */
-    .btn-primary {
-      background-color: var(--blanco);
-      color: var(--rosa);
-      padding: 14px 35px;
-      border-radius: 50px;
-      border: none;
-      font-size: 1.1rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      text-decoration: none;
-      display: inline-block;
-    }
-
-    .btn-primary:hover {
-      background-color: var(--celeste);
-      color: var(--blanco);
-      transform: scale(1.05);
-    }
-
-    /* Imagen */
-    .hero-image {
-      flex: 1;
-      text-align: right;
-      z-index: 1;
-      animation: fadeInRight 1.5s ease;
-    }
-
-    .hero-image img {
-      max-width: 340px;
-      filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.4));
-      transition: transform 0.3s ease;
-    }
-
-    .hero-image img:hover {
-      transform: translateY(-5px) scale(1.03);
-    }
-
-    /* Footer */
-    footer {
-      background: var(--oscuro);
-      color: var(--blanco);
+    /* HERO */
+    .hero {
       text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      letter-spacing: 0.5px;
+      max-width: 800px;
+      color: var(--blanco);
     }
 
-    /* Animaciones */
-    @keyframes fadeInLeft {
-      from { opacity: 0; transform: translateX(-30px); }
-      to { opacity: 1; transform: translateX(0); }
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 800;
+      margin-bottom: 18px;
     }
 
-    @keyframes fadeInRight {
-      from { opacity: 0; transform: translateX(30px); }
-      to { opacity: 1; transform: translateX(0); }
+    .hero p {
+      font-size: 1rem;
+      opacity: 0.95;
+      line-height: 1.45rem;
+      margin-bottom: 10px;
     }
 
-    /* Responsive */
+    .subtexto {
+      color: var(--blanco);
+      font-size: 0.95rem;
+      opacity: 0.9;
+      margin-top: 5px;
+    }
+
+    /* TARJETAS */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, 200px);
+      gap: 45px;
+      justify-content: center;
+    }
+
+    .card {
+      background: var(--blanco);
+      border-radius: 20px;
+      padding: 18px;
+      text-align: center;
+      text-decoration: none;
+      color: #222;
+      border: 2px solid #eee;
+      width: 200px;
+      height: 160px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+      transition: 0.25s ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: var(--rosa);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.18);
+    }
+
+    .icon-img {
+      width: 55px;
+      height: 55px;
+      object-fit: contain;
+      margin-bottom: 12px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .card h3 {
+      color: var(--rosa);
+      margin-bottom: 8px;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    .card p {
+      font-size: 0.8rem;
+      color: var(--gris-texto);
+      line-height: 1.1rem;
+    }
+
     @media (max-width: 900px) {
-      .hero {
-        flex-direction: column;
-        text-align: center;
-        padding-top: 100px;
-        background: linear-gradient(180deg, var(--rosa) 50%, var(--celeste) 50%);
+      body {
+        overflow-y: auto;
+        height: auto;
+        align-items: flex-start;
+        padding: 40px 0;
       }
 
-      .hero-image {
-        margin-top: 40px;
-        text-align: center;
+      .page {
+        gap: 30px;
       }
 
-      .hero-image img {
-        max-width: 260px;
+      .cards {
+        grid-template-columns: repeat(2, 1fr);
       }
 
-      .logo {
-        top: 20px;
-        width: 130px;
+      .card {
+        width: 100%;
+        height: auto;
       }
+    }
 
-      .hero-content h1 {
-        font-size: 2.2rem;
-      }
-
-      .hero-content p {
-        text-align: center;
+    @media (max-width: 500px) {
+      .cards {
+        grid-template-columns: 1fr;
       }
     }
   </style>
 </head>
+
 <body>
 
-  <!-- LOGO -->
-  <img src="logo-blanco.png" alt="PedidosYa Logo" class="logo" />
+  <div class="page">
 
-  <!-- HERO SECTION -->
-  <div class="hero">
-    <div class="hero-content">
-      <h1>Centro de aprendizaje<br>para Partners</h1>
+    <!-- HERO -->
+    <section class="hero">
+      <h1>Mejora tu rendimiento con acciones simples y efectivas</h1>
       <p>
-        Accede a cursos, tutoriales y recursos interactivos diseñados para ayudarte a gestionar tu negocio 
-        de forma eficiente, optimizar tus pedidos y potenciar tu crecimiento dentro de la plataforma.
+        Accede a cursos, tutoriales y recursos diseñados para ayudarte a gestionar tu negocio,
+        optimizar tus pedidos y potenciar tu crecimiento dentro de la plataforma.
       </p>
-      <a href="formulario.html" class="btn-primary">Comenzar capacitación</a>
+
+      <div class="subtexto">Haz clic en cualquier cuadro para aprender más.</div>
+    </section>
+
+    <!-- TARJETAS -->
+    <section class="cards">
+
+      <div class="card" onclick="location.href='packaging.html'">
+         <img class="icon-img" src="https://cdn-icons-png.flaticon.com/512/3081/3081559.png">
+        <h3>Packaging</h3>
+        <p>Empaque correcto del pedido.</p>
     </div>
 
-    <div class="hero-image">
-      <img src="mockup.png" alt="App PedidosYa en teléfono" />
-    </div>
+      <div class="card" onclick="location.href='menu.html'">
+        <img class="icon-img" src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png">
+        <h3>Menú</h3>
+        <p>Fotos, productos y estructura.</p>
+      </div>
+
+      <div class="card" onclick="location.href='horarios.html'">
+        <img class="icon-img" src="https://cdn-icons-png.flaticon.com/512/1827/1827370.png">
+        <h3>Horarios</h3>
+        <p>Configura aperturas y cierres.</p>
+      </div>
+
+      <div class="card" onclick="location.href='soporte.html'">
+        <img class="icon-img" src="https://cdn-icons-png.flaticon.com/512/1380/1380338.png">
+        <h3>Soporte</h3>
+        <p>Abrir tickets y resolver dudas.</p>
+      </div>
+
+    </section>
+
   </div>
+
 </body>
 </html>
-
