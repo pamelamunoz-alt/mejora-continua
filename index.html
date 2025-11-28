@@ -22,68 +22,63 @@
     }
 
     .page {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
       width: 100%;
       max-width: 1200px;
-      padding: 0px 20px;
+      margin: auto;
+      padding: 0px;
+      text-align: center;
     }
 
     /* LOGO */
     .logo {
-      width: 100px;       
-      margin-bottom: 0px; 
-      user-select: none;
+      width: 120px;
+      margin: 10px auto 0 auto;
+      display: block;
     }
 
-    .hero {
-      text-align: center;
-      max-width: 800px;
-      color: var(--blanco);
-    }
-
+    /* HERO */
     .hero h1 {
-      font-size: 2rem;
+      font-size: 2.3rem;
       font-weight: 800;
-      margin: 0;
-      margin-bottom: 10px;
+      margin: 15px auto 10px auto;
+      max-width: 900px;
+      color: var(--blanco);
+      line-height: 2.6rem;
     }
 
     .hero p {
-      font-size: 0.80rem;
+      font-size: 1rem;
       opacity: 0.95;
-      line-height: 1.4rem;
-      margin-bottom: 5px;
+      margin: 0 auto 8px auto;
+      max-width: 750px;
+      color: var(--blanco);
     }
 
     .subtexto {
-      color: var(--blanco);
       font-size: 0.85rem;
-      opacity: 0.9;
+      color: var(--blanco);
+      margin-bottom: 18px;
     }
-    
+
     .cards {
       display: grid;
       grid-template-columns: repeat(3, 200px);
-      column-gap: 45px; 
-      row-gap: 15px;
       justify-content: center;
+      column-gap: 55px;
+      row-gap: 25px;
+      margin-top: 10px;
     }
 
     .card {
       background: var(--blanco);
       border-radius: 18px;
-      padding: 20px 18px;
-      text-align: center;
-      text-decoration: none;
-      color: #222;
-      border: 2px solid #eee;
+      padding: 20px;
       width: 200px;
+      text-align: center;
+      cursor: pointer;
+      border: 2px solid #eee;
       box-shadow: 0 6px 16px rgba(0,0,0,0.12);
       transition: 0.25s ease;
-      cursor: pointer;
     }
 
     .card:hover {
@@ -96,36 +91,35 @@
       width: 55px;
       height: 55px;
       margin-bottom: 12px;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
     }
 
     .card h3 {
       color: var(--rosa);
-      margin-bottom: 8px;
       font-size: 1rem;
       font-weight: 700;
+      margin-bottom: 8px;
     }
 
     .card p {
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       color: var(--gris-texto);
-      line-height: 1.1rem;
+      line-height: 1.2rem;
     }
 
+    /* RESPONSIVE */
     @media (max-width: 900px) {
       .cards {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .card {
-        width: 100%;
+        grid-template-columns: repeat(2, 200px);
       }
     }
 
-    @media (max-width: 500px) {
+    @media (max-width: 600px) {
       .cards {
         grid-template-columns: 1fr;
+      }
+      .card {
+        width: 85%;
+        margin: auto;
       }
     }
 
@@ -136,10 +130,8 @@
 
   <div class="page">
 
-    <!-- LOGO -->
     <img src="logo-blanco.png" class="logo" alt="PedidosYa Logo">
 
-    <!-- HERO -->
     <section class="hero">
       <h1>Mejora tu rendimiento con acciones simples y efectivas</h1>
       <p>
@@ -149,7 +141,6 @@
       <div class="subtexto">Haz clic en cualquier cuadro para aprender más.</div>
     </section>
 
-    <!-- TARJETAS -->
     <section class="cards">
 
       <div class="card" onclick="location.href='packaging.html'">
